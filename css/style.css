@@ -1,0 +1,545 @@
+/*alap stílusok*/
+body{font-size: 16px; background-image: url(images/hatter.png);
+	color: #efefef;}
+
+img{max-width: 200px;}
+
+
+
+
+
+
+
+
+
+
+/*cím kinézete*/
+ .logo{height: 64px; display: inline-block; grid-area: logo;}
+ .nev{font-size: 64px; grid-area: nev; margin: 0px;}
+ .cim{margin-bottom: 10px;
+ 			display: grid;
+ 			grid-template-columns: 5vw minmax(16px, 64px) 3fr 5vw;
+ 			grid-template-rows: 64px;
+ 			grid-template-areas:
+ 				'. logo nev .'
+ 			;
+
+ }
+
+
+
+
+/*link alap kinézete*/
+a{
+	color: #efefef;
+}
+a:link{
+	text-decoration:none;
+	text-decoration-color: none;
+}
+a:visited{
+	text-decoration:none;
+	text-decoration-color: none;
+	
+}
+a:hover {
+  text-decoration: none;
+	text-decoration-color: none;
+}
+
+
+
+
+
+/*menü kinézete*/
+
+.vizszintes{margin: 0px; line-height: 0px;}
+
+.menusor{margin: 0px}
+
+.oldalnev {
+	display: inline-block;
+	margin: 10px 1vw;
+	padding: 10px;
+
+	font-size: 150%;
+	color: #000000;
+	background-color: none;}
+
+
+/*egér menü felett*/
+
+.oldalnev:hover{
+	background-clip: padding-box;
+	background-color: #efefef;
+	transition: .3s;
+}
+.oldalnev:hover a{
+	color: black;  transition: .3s;
+}
+
+.elvalasztas{display: inline-block; line-height: 0px; position: relative;
+  top: 5px;}
+
+.elvalasztas2{display: inline-block;line-height: 0px; position: relative;
+  top: 5px;}
+
+/*főoldal kinézete*/
+
+.fooldal{display: grid;
+		grid-template-columns: minmax(0px, 10vw) minmax(200px, 1fr) minmax(0px, 10vw) ;
+		grid-template-rows: minmax(0px, 10vw) minmax(100px, 1fr) minmax(0px, 10vw) ; 
+		grid-template-areas: '. . .' '. fooldalcim .' '. . .' ;}
+
+.fooldalcim{grid-area: fooldalcim; display: grid; grid-gap: 10px;
+		grid-template-columns: minmax(100px, 200px) minmax(200px, 1fr) ;
+		grid-template-rows :minmax(100px, 1fr) minmax(100px, 1fr) ; 
+		grid-template-areas: 'fooldallogo fooldalnevtarolo' '. fooldalportfolio' ;
+
+}
+
+.fooldalnevtarolo{ grid-area: fooldalnevtarolo; display: grid;
+		grid-template-columns: 1fr ;
+		grid-template-rows : 1fr 5vw ; 
+		grid-template-areas: '.' 'fooldalnev' ;
+
+}
+.fooldallogo{max-width: 100%; grid-area: fooldallogo;}
+.fooldalportfolio{font-size: 2.5vw; grid-area: fooldalportfolio; font-family: 'Roboto Slab', serif;}
+.fooldalnev{font-size: 5vw; grid-area: fooldalnev; margin: 0px; font-family: 'Roboto Slab', serif;}
+
+
+/*bemutatkozás*/
+
+.bemutatkozas{display: grid;
+grid-template-columns: 20vw 1fr 20vw; 
+grid-template-rows: auto 10vh auto;
+grid-gap: 1vw;
+grid-template-areas:
+ 'bemutatkozascim szoveg .' 
+ '. . .' 
+ 'elerhetosegekcim elerhetosegek .'}
+
+.bemutatkozasszoveg{grid-area: szoveg;}
+.elerhetosegek{grid-area: elerhetosegek;}
+.bemutatkozascim{grid-area: bemutatkozascim; font-size: 32px; transform: rotate(90deg);
+  transform-origin: 20px 10px ;}
+.elerhetosegekcim{grid-area: elerhetosegekcim ;font-size: 32px; transform: rotate(90deg);
+  transform-origin: 20px 10px ;}
+
+
+
+/*képgalériák*/
+
+.kepgaleria1{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 10vw minmax(150px, 1fr) 
+  		minmax(150px, 1fr) minmax(150px, 1fr) 
+  		minmax(150px, 1fr) 10vw;
+  grid-template-areas:
+  '. lego1 legoleiras1 lego2 legoleiras2 .'
+  '. legoleiras3 lego3 legoleiras4 lego4 .'
+  '. lego5 legoleiras5 lego6 legoleiras6 .'
+  '. . lego7 legoleiras7 . .'  
+  
+  ;}
+
+  .lego1 {
+    grid-area: lego1;
+    max-width: 100%;
+	}
+
+	.lego2 {
+	    grid-area: lego2;
+	    max-width: 100%;
+	}
+
+	.lego3 {
+	  	grid-area: lego3;
+	  	max-width: 100%;
+	}
+
+	.lego4 {
+	  	grid-area: lego4;
+	  	max-width: 100%;
+	}
+
+	.lego5 {
+	    grid-area: lego5;
+	    max-width: 100%;
+	}
+
+	.lego6 {
+	    grid-area: lego6;
+	    max-width: 100%;
+	}
+
+	.lego7 {
+	  	grid-area: lego7;
+	  	max-width: 100%;
+	}
+
+	.legoleiras1 {
+		display: block;
+    grid-area: legoleiras1;
+    max-width: 100%;
+}
+
+.legoleiras2 {
+		display: block;
+    grid-area: legoleiras2;
+    max-width: 100%;
+}
+
+.legoleiras3 {
+		display: block;
+  	grid-area: legoleiras3;
+  	max-width: 100%; 
+  	text-align: right;
+}
+
+.legoleiras4 {
+		display: block;
+		grid-area: legoleiras4;
+		max-width: 100%;
+		text-align: right;
+}
+
+.legoleiras5 {
+		display: block;
+    grid-area: legoleiras5;
+    max-width: 100%;
+}
+
+.legoleiras6 {
+		display: block;
+    grid-area: legoleiras6;
+    max-width: 100%;
+}
+
+.legoleiras7 {
+		display: block;
+  	grid-area: legoleiras7;
+  	max-width: 100%;
+}
+
+
+
+
+
+.kepgaleria2{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 10vw minmax(150px, 1fr) 
+  		minmax(150px, 1fr) minmax(150px, 1fr) 
+  		minmax(150px, 1fr) 10vw;
+  grid-template-areas:
+  '. logo1 logoleiras1 logo2 logoleiras2 .'
+  '. logoleiras3 logo3 logoleiras4 logo4 .'
+  
+
+  ;}
+
+
+
+.logo1 {
+    grid-area: logo1;
+    max-width: 100%;
+}
+
+.logo2 {
+    grid-area: logo2;
+    max-width: 100%;
+}
+
+.logo3 {
+  	grid-area: logo3;
+  	max-width: 100%;
+}
+
+.logo4 {
+  	grid-area: logo4;
+  	max-width: 100%;
+}
+
+.logoleiras1 {
+		display: block;
+    grid-area: logoleiras1;
+    max-width: 100%;
+}
+
+.logoleiras2 {
+		display: block;
+    grid-area: logoleiras2;
+    max-width: 100%;
+}
+
+.logoleiras3 {
+		display: block;
+  	grid-area: logoleiras3;
+  	max-width: 100%; text-align: right;
+}
+
+.logoleiras4 {
+		display: block;
+		grid-area: logoleiras4;
+		max-width: 100%; text-align: right;
+}
+
+/*dokumentáció kinézete*/
+.tervkepek{display: grid;
+grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
+grid-template-areas: '. fooldalterv rolamterv munkaimterv .';}
+
+.fooldalterv{grid-area: fooldalterv; width: 80%;}
+.rolamterv{grid-area: rolamterv; width: 80%;}
+.munkaimterv{grid-area: munkaimterv; width: 80%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*betű és képgaléria méretváltozások*/
+@media(max-width: 1500px){
+	body{
+		font-size: 100%;
+	}
+.oldalnev{font-size: 150%}}
+
+@media(max-width: 855px){
+	body{
+		font-size: 100%;
+	}
+.oldalnev{font-size: 150%}
+
+.kepgaleria1{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 10vw minmax(150px, 1fr) minmax(150px, 1fr) 10vw;
+  grid-template-areas:
+  '. lego1 legoleiras1 .''. legoleiras2 lego2 .'
+  '. lego3 legoleiras3 .''. legoleiras4 lego4 .'
+  '. lego5 legoleiras5 .''. legoleiras6 lego6 .'
+  '. lego7 legoleiras7 .'  
+}
+.kepgaleria2{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 10vw minmax(150px, 1fr) minmax(150px, 1fr) 10vw;
+  grid-template-areas:
+  '. logo1 logoleiras1 .''. logoleiras2 logo2 .'
+  '. logo3 logoleiras3 .''. logoleiras4 logo4 .'}
+
+  
+
+	.legoleiras1 {
+		display: block;
+    grid-area: legoleiras1;
+    max-width: 100%;
+}
+
+.legoleiras2 {
+		display: block;
+    grid-area: legoleiras2;
+    max-width: 100%; text-align: right;
+}
+
+.legoleiras3 {
+		display: block;
+  	grid-area: legoleiras3;
+  	max-width: 100%; text-align: left;
+  	
+}
+
+.legoleiras4 {
+		display: block;
+		grid-area: legoleiras4;
+		max-width: 100%; text-align: right;
+		
+}
+
+.legoleiras5 {
+		display: block;
+    grid-area: legoleiras5;
+    max-width: 100%;
+}
+
+.legoleiras6 {
+		display: block;
+    grid-area: legoleiras6;
+    max-width: 100%; text-align: right;
+}
+
+.legoleiras7 {
+		display: block;
+  	grid-area: legoleiras7;
+  	max-width: 100%;
+} 
+.logoleiras1 {
+		display: block;
+    grid-area: logoleiras1;
+    max-width: 100%;
+}
+
+.logoleiras2 {
+		display: block;
+    grid-area: logoleiras2;
+    max-width: 100%; text-align: right;
+}
+
+.logoleiras3 {
+		display: block;
+  	grid-area: logoleiras3;
+  	max-width: 100%; text-align: left;
+}
+
+.logoleiras4 {
+		display: block;
+		grid-area: logoleiras4;
+		max-width: 100%; text-align: right;
+} }
+  
+
+
+  @media(max-width:630px){
+	body{
+		font-size: 100%;
+	}
+	.oldalnev{font-size: 120%;}
+	.nev{font-size: 32px; margin-top: 16px; margin-bottom: 16px}
+
+@media(max-width: 537px){
+	body{
+		font-size: 100%;
+	}
+	.oldalnev{font-size: 100%;}
+	.nev{font-size: 32px; margin-top: 16px; margin-bottom: 16px}}
+		
+@media(max-width: 470px){
+	body{
+		font-size: 100%;
+	}
+	.oldalnev{font-size: 100%;}
+	.nev{font-size: 32px; margin-top: 16px; margin-bottom: 16px}
+	.kepgaleria1{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 10vw minmax(150px, 1fr) 10vw;
+  grid-template-areas:
+  '. lego1 .''. legoleiras1 .''. lego2 .''. legoleiras2 .'
+  '. lego3 .''. legoleiras3 .''. lego4 .''. legoleiras4 .'
+  '. lego5 .''. legoleiras5 .''. lego6 .''. legoleiras6 .'
+  '. lego7 .''. legoleiras7 .'  
+}
+	.kepgaleria2{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 10vw minmax(150px, 1fr) 10vw;
+  grid-template-areas:
+  '. logo1 .''. logoleiras1 .''. logo2 .''. logoleiras2 .'
+  '. logo3 .''. logoleiras3 .''. logo4 .''. logoleiras4 .'}
+
+  .legoleiras1 {
+		display: block;
+    grid-area: legoleiras1;
+    max-width: 100%; text-align: left;
+}
+
+.legoleiras2 {
+		display: block;
+    grid-area: legoleiras2;
+    max-width: 100%; text-align: left;
+}
+
+.legoleiras3 {
+		display: block;
+  	grid-area: legoleiras3;
+  	max-width: 100%; text-align: left;
+  	
+}
+
+.legoleiras4 {
+		display: block;
+		grid-area: legoleiras4;
+		max-width: 100%; text-align: left;
+		
+}
+
+.legoleiras5 {
+		display: block;
+    grid-area: legoleiras5;
+    max-width: 100%; text-align: left;
+}
+
+.legoleiras6 {
+		display: block;
+    grid-area: legoleiras6;
+    max-width: 100%; text-align: left;
+}
+
+.legoleiras7 {
+		display: block;
+  	grid-area: legoleiras7;
+  	max-width: 100%; text-align: left;
+} 
+.logoleiras1 {
+		display: block;
+    grid-area: logoleiras1;
+    max-width: 100%; text-align: left;
+}
+
+.logoleiras2 {
+		display: block;
+    grid-area: logoleiras2;
+    max-width: 100%; text-align: left;
+}
+
+.logoleiras3 {
+		display: block;
+  	grid-area: logoleiras3;
+  	max-width: 100%; text-align: left;
+}
+
+.logoleiras4 {
+		display: block;
+		grid-area: logoleiras4;
+		max-width: 100%; text-align: left;
+} }
+
+
+@media(max-width: 385px){
+	body{
+		font-size: 100%;
+	}
+.oldalnev{font-size: 100%;}}
+
+@media(max-width: 342px){
+	body{
+		font-size: 100%;
+	}
+	.oldalnev{font-size: 90%;}
+.nev{font-size: 32px; margin-top: 0px; margin-bottom: 0px}}
+
+@media(max-width: 275px){
+	body{
+		font-size: 100%;
+	}
+	.elvalasztas2{display: none;}
+	.oldalnev{font-size: 90%;}
+.nev{font-size: 32px; margin-top: 0px; margin-bottom: 0px}}
